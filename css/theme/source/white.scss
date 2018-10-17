@@ -19,30 +19,34 @@
 $backgroundColor: #fff;
 
 $mainColor: #222;
-$headingColor: #222;
+$headingColor: #333;
+$accentColor: #c32968;
 
-$mainFontSize: 42px;
+$mainFontSize: 38px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
-$headingFontWeight: 600;
-$linkColor: #2a76dd;
+$headingTextTransform: normal;
+$headingFontWeight: 900;
+$linkColor: $accentColor;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
-$heading1Size: 2.5em;
+$heading1Size: 1.7em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1.0em;
+
+$blockMargin: 10px;
+
+$headingMargin: 0;
 
 section.has-dark-background {
 	&, h1, h2, h3, h4, h5, h6 {
 		color: #fff;
 	}
 }
-
 
 // Theme template ------------------------------
 @import "../template/theme";

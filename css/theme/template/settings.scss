@@ -6,8 +6,10 @@ $backgroundColor: #2b2b2b;
 
 // Primary/body text
 $mainFont: 'Lato', sans-serif;
-$mainFontSize: 40px;
+$mainFontSize: 36px;
 $mainColor: #eee;
+$accentColor: #6aa84f;
+
 
 // Vertical spacing between blocks of text
 $blockMargin: 20px;
@@ -20,7 +22,7 @@ $headingLineHeight: 1.2;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingTextShadow: none;
-$headingFontWeight: normal;
+$headingFontWeight: 600;
 $heading1TextShadow: $headingTextShadow;
 
 $heading1Size: 3.77em;
