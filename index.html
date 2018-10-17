@@ -38,7 +38,7 @@
 					<p class="fragment" data-fragment-index="1">Lead Engineer @ Stitch Fix</p>
 					<p><a class="fragment" data-fragment-index="2" href="https://www.twitter.com/mylifeasalllly">@mylifeasalllly</a></p>
 					<aside class="notes">
-						My name is Ally Palanzi and I’m a lead front-end engineer at Stitch fix
+						My name is Ally Palanzi and I’m a lead front-end engineer at Stitch Fix
 					</aside>
 				</section>
 
@@ -159,7 +159,7 @@
 				<section>
 					<h1>Scary legal things!!</h1>
 					<aside class="notes">
-						Also scary legal things! Companies like Netflix and Sweegreen have already experienced lawsuits for having accessibility issues.
+						Also scary legal things! Companies like Netflix and Sweetgreen have experienced lawsuits for having accessibility issues.
 						<br><br>
 						Things like creating internal tools that employees are required to use to get their job done, if inaccessible, might mean that you can’t hire as diversely as you should, or it might mean you’re disadvantaging disabled employees to do their job.
 						<br><br>
@@ -220,31 +220,53 @@
 				</section>
 
 				<section>
-					<h1><i>Accessibility</i> best practicies</p>
+					<h1><i>Accessible</i> Design</p>
 					<aside class="notes">
-						Okay, so enough of that. I’m going to teach you something you can start using immediately.
+						I’m going to teach you something you can start using immediately.
 					</aside>
 				</section>
 
 				<section>
 					<h1>Make sure there is enough contrast between text and its background color.</h1>
-					<center>
-						<img src="images/button.png" alt="examples of button contrast">
-					</center>
+					<div class="examples">
+						<div class="example">
+							<button class="btn-ex bad-color">click here</button>
+							<div class="thumb">👎</div>
+						</div>
+						<div class="example">
+							<button class="btn-ex good-color">click here</button>
+							<div class="thumb">👍</div>
+						</div>
+					</div>
 				</section>
 
 				<section>
 					<h1>Don't indicate important information using color alone</h1>
-					<center>
-						<img src="images/link.png" alt="examples of links, one with only color, one has an underline">
-					</center>
+
+					<div class="examples">
+							<div class="example">
+								<div class="link-ex bad-link">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dicta quisquam molestiae inventore, nesciunt id facilis. <a href="#">Voluptate exercitationem</a> odio explicabo veritatis accusamus voluptatibus quod. Culpa maxime dolorem iure nesciunt eum!</div>
+								<div class="thumb">👎</div>
+							</div>
+							<div class="example">
+									<div class="link-ex good-link">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dicta quisquam molestiae inventore, nesciunt id facilis. <a href="#">Voluptate exercitationem</a> odio explicabo veritatis accusamus voluptatibus quod. Culpa maxime dolorem iure nesciunt eum!</div>
+									<div class="thumb">👍</div>
+							</div>
+						</div>
 				</section>
 
 				<section>
 					<h1>Pair values of colors together (not only hues) to increase contrast</h1>
-					<center>
-						<img src="images/color.png" alt="examples of colors">
-					</center>
+					<div class="examples">
+						<div class="example">
+							<img src="images/color-good.png" alt="examples of good colors">
+							<div class="thumb">👍</div>
+						</div>
+						<div class="example">
+							<img src="images/color-bad.png" alt="examples of bad colors">
+							<div class="thumb">👎</div>
+						</div>
+					</div>
 				</section>
 
 				<section>
@@ -256,13 +278,28 @@
 				</section>
 
 				<section>
+					<h1>Make links descriptive</h1>
+					<ul>
+						<li class="fragment" data-fragment-index="1">“click here” vs. “read more about cute puppies”</li>
+						<li class="fragment" data-fragment-index="2">This is also helpful for SEO!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1><i>Accessible</i> Markup</p>
+					<aside class="notes">
+						I’m going to teach you something you can start using immediately.
+					</aside>
+				</section>
+
+				<section>
 					<h1>Build accessible forms</h1>
 						<ul>
 							<li class="fragment" data-fragment-index="1">Always have labels, don’t rely on placeholder text</li>
 							<li class="fragment" data-fragment-index="2">Labels should not disappear on form focus</li>
 							<li class="fragment" data-fragment-index="3">Use fieldset and legend for larger forms like a checklist</li>
 						</ul>
-						<pre><code class="html" data-trim data-escape>
+						<pre class="fragment" data-fragment-index="4"><code class="html" data-trim data-escape>
 &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
 &lt;input id=&quot;name&quot; type=&quot;text&quot; name=&quot;name&quot;&gt;
 
@@ -327,6 +364,14 @@
 				</section>
 
 				<section>
+						<h1>Write good alt text for your images, hide decorative images</h1>
+						<pre><code class="html" data-trim data-escape>
+	&lt;img src="catomg.jpg" alt="cute fluffy cat">
+	&lt;img src="border.png" aria-hidden="true">
+						</code></pre>
+				</section>
+
+				<section>
 					<h1>Focus States</h1>
 					<div class="left">
 						<ul>
@@ -361,24 +406,6 @@
 						</code></pre>
 					</div>
 				</section>
-
-				<section>
-					<h1>Make links descriptive</h1>
-					<ul>
-						<li class="fragment" data-fragment-index="1">“click here” vs. “read more about cute puppies”</li>
-						<li class="fragment" data-fragment-index="2">This is also helpful for SEO!</li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>Write good alt text for your images, hide decorative images</h1>
-					<pre><code class="html" data-trim data-escape>
-&lt;img src="catomg.jpg" alt="cute fluffy cat">
-&lt;img src="border.png" aria-hidden="true">
-					</code></pre>
-
-				</section>
-
 				<section>
 					<h1>Accessible Inline SVGs</h1>
 					<p>SVGs are often used as icons on interactive elements in sites. The SVG should have a title or description, then you can use the aria-labelledby attribute to tell the screen reader what element to use to describe the SVG.</p>
@@ -411,11 +438,6 @@
 						<li class="fragment" data-fragment-index="2">Don’t allow “keyboard traps”</li>
 					</ul>
 				</section>
-
-				<section>
-					<h1>Okay accessibility is cool or whatever but now <i>what</i>?</h1>
-				</section>
-
 				<section>
 					<h1>Accessibility is <i>everyone’s</i> responsibility</h1>
 					<ul>
@@ -423,7 +445,6 @@
 						<li class="fragment" data-fragment-index="2">Semantic HTML goes a long way</li>
 					</ul>
 				</section>
-
 				<section>
 					<h1>Testing best practices</h1>
 					<ul>
@@ -435,6 +456,15 @@
 					</ul>
 				</section>
 
+				<section>
+					<h1>Screen Readers</h1>
+					<ul>
+						<li>NVDA in Firefox</li>
+						<li>VoiceOver in Safari</li>
+						<li>JAWS in Internet Explorer</li>
+					</ul>
+				</section>
+		
 				<section>
 					<h1><a href="http://khan.github.io/tota11y/">Tota11y bookmarklet</a></h1>
 					<img src="images/tota11y.png" alt="screenshot of tota11y bookmarklet on Curbed">
