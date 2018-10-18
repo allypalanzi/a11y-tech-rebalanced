@@ -1456,8 +1456,8 @@
 		background-color: yellow;
  }
 
- .reveal .link-ex {
-	 font-size: 15px;
+ .reveal .content-ex {
+	 font-size: 18px;
 	 text-align: left;
  }
 
@@ -1474,4 +1474,9 @@
 		font-weight: normal;
 		text-decoration: none;
 	}
+}
+
+.reveal pre {
+	font-size: 20px !important;
+	width: 100% !important;
 }

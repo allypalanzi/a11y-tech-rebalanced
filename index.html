@@ -4,12 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Accessibility Matters.</title>
+		<title>Accessibility for designers & developers.</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css">
-
-		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
@@ -231,11 +229,11 @@
 					<div class="examples">
 						<div class="example">
 							<button class="btn-ex bad-color">click here</button>
-							<div class="thumb">👎</div>
+							<div class="thumb" role="img" alt="bad example">👎</div>
 						</div>
 						<div class="example">
 							<button class="btn-ex good-color">click here</button>
-							<div class="thumb">👍</div>
+							<div class="thumb" role="img" alt="good example">👍</div>
 						</div>
 					</div>
 				</section>
@@ -244,15 +242,15 @@
 					<h1>Don't indicate important information using color alone</h1>
 
 					<div class="examples">
-							<div class="example">
-								<div class="link-ex bad-link">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dicta quisquam molestiae inventore, nesciunt id facilis. <a href="#">Voluptate exercitationem</a> odio explicabo veritatis accusamus voluptatibus quod. Culpa maxime dolorem iure nesciunt eum!</div>
-								<div class="thumb">👎</div>
-							</div>
-							<div class="example">
-									<div class="link-ex good-link">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dicta quisquam molestiae inventore, nesciunt id facilis. <a href="#">Voluptate exercitationem</a> odio explicabo veritatis accusamus voluptatibus quod. Culpa maxime dolorem iure nesciunt eum!</div>
-									<div class="thumb">👍</div>
-							</div>
+						<div class="example">
+							<div class="content-ex bad-link">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dicta quisquam molestiae inventore, nesciunt id facilis. <a href="#">Voluptate exercitationem</a> odio explicabo veritatis accusamus voluptatibus quod. Culpa maxime dolorem iure nesciunt eum!</div>
+							<div class="thumb" role="img" alt="bad example">👎</div>
 						</div>
+						<div class="example">
+							<div class="content-ex good-link">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dicta quisquam molestiae inventore, nesciunt id facilis. <a href="#">Voluptate exercitationem</a> odio explicabo veritatis accusamus voluptatibus quod. Culpa maxime dolorem iure nesciunt eum!</div>
+							<div class="thumb" role="img" alt="good example">👍</div>
+						</div>
+					</div>
 				</section>
 
 				<section>
@@ -260,11 +258,11 @@
 					<div class="examples">
 						<div class="example">
 							<img src="images/color-good.png" alt="examples of good colors">
-							<div class="thumb">👍</div>
+							<div class="thumb" role="img" alt="good example">👍</div>
 						</div>
 						<div class="example">
 							<img src="images/color-bad.png" alt="examples of bad colors">
-							<div class="thumb">👎</div>
+							<div class="thumb" role="img" alt="bad example">👎</div>
 						</div>
 					</div>
 				</section>
@@ -275,21 +273,29 @@
 					<div class="examples">
 						<div class="example">
 							<img src="images/form-good.png" alt="examples of good colors">
-							<div class="thumb">👍</div>
+							<div class="thumb" role="img" alt="good example">👍</div>
 						</div>
 						<div class="example">
 							<img src="images/form-bad.png" alt="examples of bad colors">
-							<div class="thumb">👎</div>
+							<div class="thumb" role="img" alt="bad example">👎</div>
 						</div>
 					</div>
 				</section>
 
 				<section>
 					<h1>Make links descriptive</h1>
-					<ul>
-						<li class="fragment" data-fragment-index="1">“click here” vs. “read more about cute puppies”</li>
-						<li class="fragment" data-fragment-index="2">This is also helpful for SEO!</li>
+					<p>Descriptive links help users provide context for where the link will take them. Uses of click here and read more should be avoided in most situations. This is also helpful for SEO!</p>
 					</ul>
+					<div class="examples">
+							<div class="example">
+								<div class="content-ex">The best thing about <a href="#">cats</a> is they are so cute.</div>
+								<div class="thumb" role="img" alt="good example">👍</div>
+							</div>
+							<div class="example">
+									<div class="content-ex">The best thing about cats is they are so cute. <a href="#">Click here</a> to learn more.</div>
+									<div class="thumb" role="img" alt="bad example">👎</div>
+							</div>
+						</div>
 				</section>
 
 				<section>
@@ -301,28 +307,31 @@
 
 				<section>
 					<h1>Build accessible forms</h1>
-						<ul>
-							<li class="fragment" data-fragment-index="1">Always have labels, don’t rely on placeholder text</li>
-							<li class="fragment" data-fragment-index="2">Labels should not disappear on form focus</li>
-							<li class="fragment" data-fragment-index="3">Use fieldset and legend for larger forms like a checklist</li>
-						</ul>
-						<pre class="fragment" data-fragment-index="4"><code class="html" data-trim data-escape>
-&lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
-&lt;input id=&quot;name&quot; type=&quot;text&quot; name=&quot;name&quot;&gt;
-
-&lt;fieldset&gt;
-  &lt;legend&gt;Select your pizza toppings:&lt;/legend&gt;
-
-  &lt;input id=&quot;ham&quot; type=&quot;checkbox&quot; name=&quot;toppings&quot; value=&quot;ham&quot;&gt;
-  &lt;label for=&quot;ham&quot;&gt;Ham&lt;/label&gt;
-  &lt;input id=&quot;pepperoni&quot; type=&quot;checkbox&quot; name=&quot;toppings&quot; value=&quot;pepperoni&quot;&gt;
-  &lt;label for=&quot;pepperoni&quot;&gt;Pepperoni&lt;/label&gt;
-&lt;/fieldset&gt;
-						</code></pre>
+					<ul>
+						<li class="fragment" data-fragment-index="1">Always have labels, don’t rely on placeholder text</li>
+						<li class="fragment" data-fragment-index="2">Labels should not disappear on form focus</li>
+						<li class="fragment" data-fragment-index="3">Use fieldset and legend for larger forms like a checklist</li>
+					</ul>
 				</section>
 
 				<section>
-				<h1>Use semantic HTML</h1>
+					<pre><code class="html" data-trim data-escape>
+						&lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+						&lt;input id=&quot;name&quot; type=&quot;text&quot; name=&quot;name&quot;&gt;
+						
+						&lt;fieldset&gt;
+							&lt;legend&gt;Select your pizza toppings:&lt;/legend&gt;
+						
+							&lt;input id=&quot;ham&quot; type=&quot;checkbox&quot; name=&quot;toppings&quot; value=&quot;ham&quot;&gt;
+							&lt;label for=&quot;ham&quot;&gt;Ham&lt;/label&gt;
+							&lt;input id=&quot;pepperoni&quot; type=&quot;checkbox&quot; name=&quot;toppings&quot; value=&quot;pepperoni&quot;&gt;
+							&lt;label for=&quot;pepperoni&quot;&gt;Pepperoni&lt;/label&gt;
+						&lt;/fieldset&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h1>Use semantic HTML</h1>
 					<div class="left">
 						<ul>
 							<li class="fragment" data-fragment-index="1">Limit div soup, strip unnecessary HTML elements</li>
@@ -332,23 +341,23 @@
 						</ul>
 					</div>
 					<div class="right">
-					<pre><code class="html" data-trim data-escape>
-&lt;html lang="en"&gt;
- &lt;head&gt;
-  &lt;title&gt;&lt;/title&gt;
- &lt;/head&gt;
- &lt;body&gt;
-  &lt;header&gt;&lt;/header&gt;
-  &lt;nav&gt;&lt;/nav&gt;
-  &lt;section&gt;&lt;/section&gt;
-  &lt;article&gt;&lt;/article&gt;
-  &lt;aside&gt;&lt;/aside&gt;
-  &lt;footer&gt;&lt;/footer&gt;
- &lt;/body&gt;
-&lt;/html&gt;
+						<pre><code class="html" data-trim data-escape>
+							&lt;html lang="en"&gt;
+								&lt;head&gt;
+								&lt;title&gt;&lt;/title&gt;
+								&lt;/head&gt;
+								&lt;body&gt;
+								&lt;header&gt;&lt;/header&gt;
+								&lt;nav&gt;&lt;/nav&gt;
+								&lt;section&gt;&lt;/section&gt;
+								&lt;article&gt;&lt;/article&gt;
+								&lt;aside&gt;&lt;/aside&gt;
+								&lt;footer&gt;&lt;/footer&gt;
+								&lt;/body&gt;
+							&lt;/html&gt;
 						</code></pre>
-						</div>
-						<cite><a href="http://www.w3schools.com/html/html5_semantic_elements.asp">W3C HTML5 Semantic Elements</a></cite>
+					</div>
+					<cite><a class="fragment" data-fragment-index="5" href="http://www.w3schools.com/html/html5_semantic_elements.asp">W3C HTML5 Semantic Elements</a></cite>
 				</section>
 
 				<section>
@@ -389,9 +398,9 @@
 					</div>
 					<div class="right">
 					<pre class="fragment" data-fragment-index="1"><code class="css" data-trim data-escape>
-*:focus {
- outline: none; //BAD!!!
-}
+						*:focus {
+						outline: none; //BAD!!!
+						}
 					</code></pre>
 					<img class="fragment" data-fragment-index="2" src="images/focus-good.png">
 					<img class="fragment" data-fragment-index="3" src="images/focus-subtle.png">
@@ -400,18 +409,10 @@
 
 				<section>
 					<h1>Know when to use buttons vs. links</h1>
-					<div class="left">
-						<ul>
-							<li class="fragment" data-fragment-index="1">Linking to something outside the page? Use an anchor tag.</li>
-							<li class="fragment" data-fragment-index="2">Performing an action on the page? Use a button.</li>
-						</ul>
-					</div>
-					<div class="right">
-						<pre><code class="html" data-trim data-escape>
-<a href="https://google.com">Search it here</a>
-<button type="button">Submit this form</button>
-						</code></pre>
-					</div>
+					<ul>
+						<li class="fragment" data-fragment-index="1">Linking to something outside the page? Use an anchor tag.</li>
+						<li class="fragment" data-fragment-index="2">Performing an action on the page? Use a button.</li>
+					</ul>
 				</section>
 				<section>
 					<h1>Accessible Inline SVGs</h1>
@@ -466,11 +467,17 @@
 
 				<section>
 					<h1>Screen Readers</h1>
+					<p class="fragment" data-fragment-index="1">A program that helps visually impaired people navigate a computer. There are many different versions, that are often paired with a specific browser. The most common:</p>
 					<ul>
-						<li>NVDA in Firefox</li>
-						<li>VoiceOver in Safari</li>
-						<li>JAWS in Internet Explorer</li>
+						<li class="fragment" data-fragment-index="2">NVDA in Firefox</li>
+						<li class="fragment" data-fragment-index="3">VoiceOver in Safari</li>
+						<li class="fragment" data-fragment-index="4">JAWS in Internet Explorer</li>
 					</ul>
+				</section>
+
+				<section>
+					<h1><a href="https://www.deque.com/axe">axe Browser Extension</a></h1>
+					<img src="images/axe.png" alt="screenshot of axe developer tools" />
 				</section>
 		
 				<section>
