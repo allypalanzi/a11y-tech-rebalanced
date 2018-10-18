@@ -1417,10 +1417,13 @@
  .reveal .examples {
 	 display: flex;
 	 justify-content: space-between;
-	 max-width: 50%;
+	 max-width: 60%;
 	 margin: 0 auto;
 	 align-items: center;
 	 padding: 30px 0 0;
+	 img {
+		 width: 100%;
+	 }
  }
 
  .reveal .thumb {

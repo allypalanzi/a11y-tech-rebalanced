@@ -1207,11 +1207,13 @@ div.right {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  max-width: 50%;
+  max-width: 60%;
   margin: 0 auto;
   -ms-flex-align: center;
       align-items: center;
   padding: 30px 0 0; }
+  .reveal .examples img {
+    width: 100%; }
 
 .reveal .thumb {
   margin-top: 20px;
