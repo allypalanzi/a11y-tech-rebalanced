@@ -1413,3 +1413,65 @@
 	 width: 100%;
 	 margin-top: 10px;
  }
+
+ .reveal .examples {
+	 display: flex;
+	 justify-content: space-between;
+	 max-width: 60%;
+	 margin: 0 auto;
+	 align-items: center;
+	 padding: 30px 0 0;
+	 img {
+		 width: 100%;
+	 }
+ }
+
+ .reveal .thumb {
+	 margin-top: 20px;
+	 font-size: 50px;
+ }
+
+ .reveal .example {
+	 text-align: center;
+	 flex-basis: 45%;
+ }
+
+ .reveal .btn-ex {
+	 padding: 15px 20px;
+	 font-size: 16px;
+	 border: 0;
+	 text-transform: uppercase;
+	 font-weight: 900;
+	 &:hover {
+		 cursor: pointer;
+	 }
+ }
+
+ .reveal .bad-color {
+	 background-color: yellow;
+	 color: white;
+ }
+
+ .reveal .good-color {
+		background-color: yellow;
+ }
+
+ .reveal .link-ex {
+	 font-size: 15px;
+	 text-align: left;
+ }
+
+ .reveal .good-link {
+	 a {
+		 color: red;
+		 font-weight: normal;
+	 }
+ }
+
+ .reveal .bad-link {
+	a {
+		color: red;
+		font-weight: normal;
+		text-decoration: none;
+	}
+}
