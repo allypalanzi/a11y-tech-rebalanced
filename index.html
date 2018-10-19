@@ -320,19 +320,19 @@
 						&lt;input id=&quot;name&quot; type=&quot;text&quot; name=&quot;name&quot;&gt;
 						
 						&lt;fieldset&gt;
-							&lt;legend&gt;Select your pizza toppings:&lt;/legend&gt;
+						 &lt;legend&gt;Select your pizza toppings:&lt;/legend&gt;
 						
-							&lt;input id=&quot;ham&quot; type=&quot;checkbox&quot; name=&quot;toppings&quot; value=&quot;ham&quot;&gt;
-							&lt;label for=&quot;ham&quot;&gt;Ham&lt;/label&gt;
-							&lt;input id=&quot;pepperoni&quot; type=&quot;checkbox&quot; name=&quot;toppings&quot; value=&quot;pepperoni&quot;&gt;
-							&lt;label for=&quot;pepperoni&quot;&gt;Pepperoni&lt;/label&gt;
+						 &lt;input id=&quot;ham&quot; type=&quot;checkbox&quot; name=&quot;toppings&quot; value=&quot;ham&quot;&gt;
+						 &lt;label for=&quot;ham&quot;&gt;Ham&lt;/label&gt;
+						 &lt;input id=&quot;pepperoni&quot; type=&quot;checkbox&quot; name=&quot;toppings&quot; value=&quot;pepperoni&quot;&gt;
+						 &lt;label for=&quot;pepperoni&quot;&gt;Pepperoni&lt;/label&gt;
 						&lt;/fieldset&gt;
 					</code></pre>
 				</section>
 
 				<section>
 					<h1>Use semantic HTML</h1>
-					<div class="left">
+					<div class="left" class="fragment" data-fragment-index="1">
 						<ul>
 							<li class="fragment" data-fragment-index="1">Limit div soup, strip unnecessary HTML elements</li>
 							<li class="fragment" data-fragment-index="2">Use headings  <code class="html">h1-h6</code>  for content structure</li>
@@ -341,23 +341,23 @@
 						</ul>
 					</div>
 					<div class="right">
-						<pre><code class="html" data-trim data-escape>
+						<pre class="fragment" data-fragment-index="5"><code class="html" data-trim data-escape>
 							&lt;html lang="en"&gt;
-								&lt;head&gt;
-								&lt;title&gt;&lt;/title&gt;
-								&lt;/head&gt;
-								&lt;body&gt;
-								&lt;header&gt;&lt;/header&gt;
-								&lt;nav&gt;&lt;/nav&gt;
-								&lt;section&gt;&lt;/section&gt;
-								&lt;article&gt;&lt;/article&gt;
-								&lt;aside&gt;&lt;/aside&gt;
-								&lt;footer&gt;&lt;/footer&gt;
-								&lt;/body&gt;
+							 &lt;head&gt;
+						   &lt;title&gt;&lt;/title&gt;
+							 &lt;/head&gt;
+							 &lt;body&gt;
+							 &lt;header&gt;&lt;/header&gt;
+							 &lt;nav&gt;&lt;/nav&gt;
+							 &lt;section&gt;&lt;/section&gt;
+							 &lt;article&gt;&lt;/article&gt;
+							 &lt;aside&gt;&lt;/aside&gt;
+							 &lt;footer&gt;&lt;/footer&gt;
+							 &lt;/body&gt;
 							&lt;/html&gt;
 						</code></pre>
 					</div>
-					<cite><a class="fragment" data-fragment-index="5" href="http://www.w3schools.com/html/html5_semantic_elements.asp">W3C HTML5 Semantic Elements</a></cite>
+					<cite><a href="http://www.w3schools.com/html/html5_semantic_elements.asp">W3C HTML5 Semantic Elements</a></cite>
 				</section>
 
 				<section>
@@ -374,13 +374,15 @@
 
 				<section>
 					<h1>HTML document should have a language attribute</h1>
+					<br>
 					<pre><code class="html" data-trim data-escape>
-						&lt;html lang="en"&gt; &lt;/html&gt;
+						&lt;html lang="en"&gt;
 					</code></pre>
 				</section>
 
 				<section>
 						<h1>Write good alt text for your images, hide decorative images</h1>
+						<br>
 						<pre><code class="html" data-trim data-escape>
 	&lt;img src="catomg.jpg" alt="cute fluffy cat">
 	&lt;img src="border.png" aria-hidden="true">
@@ -448,10 +450,21 @@
 				</section>
 
 				<section>
-					<h1>Accessibility is <i>everyone’s</i> responsibility</h1>
+					<h1>Accessible <i>JavaScript</i></h1>
+				</section>
+
+				<section>
+					<h1>Single pages applications</h1>
 					<ul>
-						<li class="fragment" data-fragment-index="1">Don’t hesitate to push back on inaccessible designs</li>
-						<li class="fragment" data-fragment-index="2">Semantic HTML goes a long way</li>
+						<li class="fragment" data-fragment-index="1">Notifying screen readers of display changes by programatically setting focus on elements</li>
+						<li class="fragment" data-fragment-index="2">Notify users of errors</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Use semantic markup</h1>
+					<ul>
+						<li class="fragment" data-fragment-index="1">JavaScript applications are still the web, we can't forget the fundamentals and not use semantic HTML!</li>
 					</ul>
 				</section>
 
@@ -473,6 +486,11 @@
 						<li class="fragment" data-fragment-index="3">VoiceOver in Safari</li>
 						<li class="fragment" data-fragment-index="4">JAWS in Internet Explorer</li>
 					</ul>
+				</section>
+
+				<section>
+					<h1><a href="https://developers.google.com/web/tools/lighthouse/">Chrome Lighthouse Audit</a></h1>
+					<img src="images/lighthouse.gif" alt="screenshot of lighthouse audit tool" />
 				</section>
 
 				<section>
@@ -503,6 +521,14 @@
 						<li><a href="http://www.508checker.com/">508 Compliance Checker</a></li>
 						<li><a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines</a></li>
 						<li><a href="https://validator.w3.org/">W3C Markup Validation</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Accessibility is <i>everyone’s</i> responsibility</h1>
+					<ul>
+						<li class="fragment" data-fragment-index="1">Don’t hesitate to push back on inaccessible designs</li>
+						<li class="fragment" data-fragment-index="2">Semantic HTML goes a long way</li>
 					</ul>
 				</section>
 
