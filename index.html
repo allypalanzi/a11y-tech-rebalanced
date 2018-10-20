@@ -323,15 +323,15 @@
 				<section>
 					<h1>Use the correct HTML elements</h1>
 					<ul>
-						<li class="fragment" data-fragment-index="1">&lt;header&gt; for headers</li>
-						<li class="fragment" data-fragment-index="2">&lt;nav&gt; for navigation</li>
-						<li class="fragment" data-fragment-index="3">&lt;sections&gt; for grouping page sections together</li>
-						<li class="fragment" data-fragment-index="4">&lt;article&gt; for grouped content</li>
-						<li class="fragment" data-fragment-index="5">&lt;aside&gt; for supplemental sidebar information</li>
-						<li class="fragment" data-fragment-index="6">&lt;cite&gt; for citations</li>
-						<li class="fragment" data-fragment-index="7">&lt;footer&gt; for footers</li>
+						<li class="fragment" data-fragment-index="1"><code class="html">&lt;header&gt;</code> for headers</li>
+						<li class="fragment" data-fragment-index="2"><code class="html">&lt;nav&gt;</code> for navigation</li>
+						<li class="fragment" data-fragment-index="3"><code class="html">&lt;section&gt;</code> for grouping page sections together</li>
+						<li class="fragment" data-fragment-index="4"><code class="html">&lt;article&gt;</code> for grouped content</li>
+						<li class="fragment" data-fragment-index="5"><code class="html">&lt;aside&gt;</code> for supplemental sidebar information</li>
+						<li class="fragment" data-fragment-index="6"><code class="html">&lt;cite&gt;</code> for citations</li>
+						<li class="fragment" data-fragment-index="7"><code class="html">&lt;footer&gt;</code> for footers</li>
+						<li class="fragment" data-fragment-index="8"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">...and more!</a></li>
 					</ul>
-
 				</section>
 
 				<section>
@@ -356,16 +356,16 @@
 
 
 				<section>
-						<h1>Build accessible forms</h1>
-						<ul>
-							<li class="fragment" data-fragment-index="1">Always have labels, don’t rely on placeholder text</li>
-							<li class="fragment" data-fragment-index="2">Labels should not disappear on form focus</li>
-							<li class="fragment" data-fragment-index="3">Use fieldset and legend for larger forms like a checklist</li>
-							<li class="fragment" data-fragment-index="4">Always, always, always use semantic HTML form markup. Don't alter other elements to behave like forms.</li>
-						</ul>
-					</section>
+					<h1>Build accessible forms</h1>
+					<ul>
+						<li class="fragment" data-fragment-index="1">Always have labels, don’t rely on placeholder text</li>
+						<li class="fragment" data-fragment-index="2">Labels should not disappear on form focus</li>
+						<li class="fragment" data-fragment-index="3">Use fieldset and legend for larger forms like a checklist</li>
+						<li class="fragment" data-fragment-index="4">Always, always, always use semantic HTML form markup. Don't alter other elements to behave like forms</li>
+					</ul>
+				</section>
 	
-					<section>
+				<section>
 					<pre><code class="html" data-trim data-escape>
 						&lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
 						&lt;input id=&quot;name&quot; type=&quot;text&quot; name=&quot;name&quot;&gt;
@@ -382,16 +382,34 @@
 				</section>
 
 				<section>
-					<h1>Write good alt text for your images, hide decorative images</h1>
+					<h1>Write good alt text for your images</h1>
 					<br>
 					<pre><code class="html" data-trim data-escape>
+// good
 &lt;img src="catomg.jpg" alt="cute fluffy cat">
-&lt;img src="border.png" aria-hidden="true" role="presentation">
+//bad
+&lt;img src="catomg.jpg" alt="image of animal">
 					</code></pre>
 					<aside class="notes">
-						When adding an image, think: would the page make sense without this? If so, it's a decorative image. If not, be as descriptive as possible in the alt text.
+						Be as descriptive as possible in the alt text.
 					</aside>
 				</section>
+
+
+				<section>
+						<h1>For decorative images</h1>
+						<ul>
+							<li>Alt text should be blank (works in every browser)</li>
+							<li>Role should be presentation (limited in some browsers)</li>
+						</ul>
+						<br>
+						<pre><code class="html" data-trim data-escape>
+	&lt;img src="border.png" alt="" role="presentation">
+						</code></pre>
+						<aside class="notes">
+							When adding an image, think: would the page make sense without this? If so, it's a decorative image.
+						</aside>
+					</section>
 
 				<section>
 					<h1>Focus States</h1>
@@ -454,6 +472,11 @@
 				</section>
 
 				<section>
+					<h1>Sites should have a <i>Skip Navigation</i> feature</h1>
+					<img src="images/skipnav.png" alt="example of skip navigation link on healthcare.gov" />
+				</section>
+
+				<section>
 					<h1>Accessible <i>JavaScript</i></h1>
 				</section>
 
@@ -469,6 +492,15 @@
 					<h1>Use semantic markup</h1>
 					<ul>
 						<li class="fragment" data-fragment-index="1">JavaScript applications are still the web, we can't forget the fundamentals and not use semantic HTML!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Modals 🙈</h1>
+					<ul>
+						<li>Notify screenreaders of modals with focus</li>
+						<li>Ensure escape key closes the modal</li>
+						<li>Don't allow users to tab to anywhere else on the page besides what is displayed within the modal</li>
 					</ul>
 				</section>
 
